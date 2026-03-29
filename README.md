@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <img width="100%" src="https://raw.githubusercontent.com/adwaith-0/indic-faker/main/assets/banner.png" alt="indic-faker banner">
+    <img width="100%" src="https://raw.githubusercontent.com/adwaith-0/indic-faker/main/.github/banner.png" alt="indic-faker banner">
   </p>
 
   <p>
@@ -55,13 +55,13 @@ Every method that isn't India-specific (`.ipv4()`, `.text()`, `.uuid4()`) **auto
 <summary><h2>🚀 Install</h2></summary>
 
 ```bash
-pip install git+https://github.com/adwaith-0/indic-faker.git
+pip install indic-faker
 ```
 
 For ML/AI dataset export (pandas DataFrame):
 
 ```bash
-pip install "indic-faker[ml] @ git+https://github.com/adwaith-0/indic-faker.git"
+pip install indic-faker[ml]
 ```
 
 That's it. No cloning, no setup — just install and use.
