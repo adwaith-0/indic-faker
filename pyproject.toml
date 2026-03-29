@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indic-faker"
+version = "0.2.0"
+description = "Generate realistic Indian fake data — Faker, but with India as a first-class citizen."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Adwai"},
+]
+keywords = [
+    "faker", "india", "aadhaar", "pan", "gstin", "upi", "indic",
+    "hindi", "malayalam", "tamil", "telugu", "bengali", "kannada",
+    "gujarati", "marathi", "synthetic-data", "test-data", "indian-names",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = [
+    "faker>=18.0",
+]
+
+[project.optional-dependencies]
+ml = [
+    "pandas>=1.5",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pandas>=1.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/adwaith-0/indic-faker"
+Repository = "https://github.com/adwaith-0/indic-faker"
+Issues = "https://github.com/adwaith-0/indic-faker/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

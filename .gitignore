@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing / caching
+.pytest_cache/
+.benchmarks/
+htmlcov/
+.coverage
+.tox/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Project-specific (demo/scratch files)
+demo_output.json
+demo_output.txt
+demo_v2.json
+
+# Pyright config (local IDE config, not needed in repo)
+pyrightconfig.json
