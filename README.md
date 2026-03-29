@@ -55,14 +55,16 @@ Every method that isn't India-specific (`.ipv4()`, `.text()`, `.uuid4()`) **auto
 <summary><h2>🚀 Install</h2></summary>
 
 ```bash
-pip install indic-faker
+pip install git+https://github.com/adwaith-0/indic-faker.git
 ```
 
 For ML/AI dataset export (pandas DataFrame):
 
 ```bash
-pip install indic-faker[ml]
+pip install "indic-faker[ml] @ git+https://github.com/adwaith-0/indic-faker.git"
 ```
+
+That's it. No cloning, no setup — just install and use.
 
 </details>
 
