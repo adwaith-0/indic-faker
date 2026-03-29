@@ -429,15 +429,14 @@ class IndicFaker:
         """
         gender = self._random.choice(["male", "female"])
 
+        # Use paired name methods — same index for both scripts
+        # so Latin "Jagadeesh" maps to native "ಜಗದೀಶ್" (same person)
         if gender == "male":
-            first = self._person.first_name_male(script="latin")
-            first_native = self._person.first_name_male(script="native")
+            first, first_native = self._person.first_name_male_pair()
         else:
-            first = self._person.first_name_female(script="latin")
-            first_native = self._person.first_name_female(script="native")
+            first, first_native = self._person.first_name_female_pair()
 
-        last = self._person.last_name(script="latin")
-        last_native = self._person.last_name(script="native")
+        last, last_native = self._person.last_name_pair()
 
         full_name = f"{first} {last}"
         full_name_native = f"{first_native} {last_native}"
@@ -448,6 +447,11 @@ class IndicFaker:
 
         city = self.city()
         pincode = self.pincode()
+
+        # Generate degree FIRST, then pick a coherent job title
+        # so MBBS → Doctor, B.Tech → Software Engineer (not MBBS → Scrum Master)
+        degree = self.degree()
+        job_title = self._job.job_title_for_degree(degree)
 
         all_fields = {
             "name": full_name,
@@ -467,10 +471,10 @@ class IndicFaker:
             "bank_account": self.bank_account(),
             "upi_id": self.upi_id(),
             "employer": self.employer(),
-            "job_title": self.job_title(),
-            "salary": self.salary_lpa(),
+            "job_title": job_title,
+            "salary": self._job.salary_for_job(job_title),
             "college": self.college(),
-            "degree": self.degree(),
+            "degree": degree,
         }
 
         if fields:

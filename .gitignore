@@ -37,6 +37,17 @@ desktop.ini
 demo_output.json
 demo_output.txt
 demo_v2.json
+demo_result.txt
+demo_variations.py
+sample_output.txt
+verify_results.txt
+upload_to_hf.py
+
+# Generated datasets (uploaded to HuggingFace separately)
+hf_dataset/
+dataset_card.md
+*.csv
+*.xlsx
 
 # Pyright config (local IDE config, not needed in repo)
 pyrightconfig.json

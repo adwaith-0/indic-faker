@@ -49,6 +49,11 @@ class PersonProvider:
             return native_list[idx]
         return latin_list[idx]
 
+    def _pick_name_pair(self, native_list, latin_list):
+        """Pick a name and return BOTH (latin, native) for the same index."""
+        idx = self.random.randint(0, len(native_list) - 1)
+        return latin_list[idx], native_list[idx]
+
     def name(self, script="latin"):
         """Generate a full name (first + last).
         
@@ -88,6 +93,24 @@ class PersonProvider:
         """Generate a surname."""
         return self._pick_name(
             self._last_names, self._last_names_latin, script
+        )
+
+    def first_name_male_pair(self):
+        """Return (latin, native) for the same male first name."""
+        return self._pick_name_pair(
+            self._male_first_names, self._male_first_names_latin
+        )
+
+    def first_name_female_pair(self):
+        """Return (latin, native) for the same female first name."""
+        return self._pick_name_pair(
+            self._female_first_names, self._female_first_names_latin
+        )
+
+    def last_name_pair(self):
+        """Return (latin, native) for the same last name."""
+        return self._pick_name_pair(
+            self._last_names, self._last_names_latin
         )
 
     def prefix(self, script="latin"):

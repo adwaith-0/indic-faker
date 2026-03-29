@@ -1,0 +1,114 @@
+<svg class="rich-terminal" viewBox="0 0 1604 367.2" xmlns="http://www.w3.org/2000/svg">
+    <!-- Generated with Rich https://www.textualize.io -->
+    <style>
+
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Regular"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Regular.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Regular.woff") format("woff");
+        font-style: normal;
+        font-weight: 400;
+    }
+    @font-face {
+        font-family: "Fira Code";
+        src: local("FiraCode-Bold"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff2/FiraCode-Bold.woff2") format("woff2"),
+                url("https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/woff/FiraCode-Bold.woff") format("woff");
+        font-style: bold;
+        font-weight: 700;
+    }
+
+    .terminal-2269685148-matrix {
+        font-family: Fira Code, monospace;
+        font-size: 20px;
+        line-height: 24.4px;
+        font-variant-east-asian: full-width;
+    }
+
+    .terminal-2269685148-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-family: arial;
+    }
+
+    .terminal-2269685148-r1 { fill: #c5c8c6 }
+.terminal-2269685148-r2 { fill: #98a84b;font-weight: bold }
+.terminal-2269685148-r3 { fill: #68a0b3;font-weight: bold }
+.terminal-2269685148-r4 { fill: #868887 }
+.terminal-2269685148-r5 { fill: #c5c8c6;font-weight: bold }
+.terminal-2269685148-r6 { fill: #398280 }
+.terminal-2269685148-r7 { fill: #608ab1 }
+.terminal-2269685148-r8 { fill: #d0b344 }
+.terminal-2269685148-r9 { fill: #98729f }
+    </style>
+
+    <defs>
+    <clipPath id="terminal-2269685148-clip-terminal">
+      <rect x="0" y="0" width="1585.0" height="316.2" />
+    </clipPath>
+    <clipPath id="terminal-2269685148-line-0">
+    <rect x="0" y="1.5" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-1">
+    <rect x="0" y="25.9" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-2">
+    <rect x="0" y="50.3" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-3">
+    <rect x="0" y="74.7" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-4">
+    <rect x="0" y="99.1" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-5">
+    <rect x="0" y="123.5" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-6">
+    <rect x="0" y="147.9" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-7">
+    <rect x="0" y="172.3" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-8">
+    <rect x="0" y="196.7" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-9">
+    <rect x="0" y="221.1" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-10">
+    <rect x="0" y="245.5" width="1586" height="24.65"/>
+            </clipPath>
+<clipPath id="terminal-2269685148-line-11">
+    <rect x="0" y="269.9" width="1586" height="24.65"/>
+            </clipPath>
+    </defs>
+
+    <rect fill="#292929" stroke="rgba(255,255,255,0.35)" stroke-width="1" x="1" y="1" width="1602" height="365.2" rx="8"/><text class="terminal-2269685148-title" fill="#c5c8c6" text-anchor="middle" x="801" y="27">indic-faker&#160;·&#160;to_dataframe(5)</text>
+            <g transform="translate(26,22)">
+            <circle cx="0" cy="0" r="7" fill="#ff5f57"/>
+            <circle cx="22" cy="0" r="7" fill="#febc2e"/>
+            <circle cx="44" cy="0" r="7" fill="#28c840"/>
+            </g>
+        
+    <g transform="translate(9, 41)" clip-path="url(#terminal-2269685148-clip-terminal)">
+    
+    <g class="terminal-2269685148-matrix">
+    <text class="terminal-2269685148-r1" x="1586" y="20" textLength="12.2" clip-path="url(#terminal-2269685148-line-0)">
+</text><text class="terminal-2269685148-r2" x="0" y="44.4" textLength="48.8" clip-path="url(#terminal-2269685148-line-1)">&gt;&gt;&gt;&#160;</text><text class="terminal-2269685148-r1" x="48.8" y="44.4" textLength="414.8" clip-path="url(#terminal-2269685148-line-1)">from&#160;indic_faker&#160;import&#160;IndicFaker</text><text class="terminal-2269685148-r1" x="1586" y="44.4" textLength="12.2" clip-path="url(#terminal-2269685148-line-1)">
+</text><text class="terminal-2269685148-r2" x="0" y="68.8" textLength="48.8" clip-path="url(#terminal-2269685148-line-2)">&gt;&gt;&gt;&#160;</text><text class="terminal-2269685148-r1" x="48.8" y="68.8" textLength="317.2" clip-path="url(#terminal-2269685148-line-2)">fake&#160;=&#160;IndicFaker(seed=42)</text><text class="terminal-2269685148-r1" x="1586" y="68.8" textLength="12.2" clip-path="url(#terminal-2269685148-line-2)">
+</text><text class="terminal-2269685148-r2" x="0" y="93.2" textLength="48.8" clip-path="url(#terminal-2269685148-line-3)">&gt;&gt;&gt;&#160;</text><text class="terminal-2269685148-r1" x="48.8" y="93.2" textLength="1317.6" clip-path="url(#terminal-2269685148-line-3)">fake.to_dataframe(5,&#160;fields=[&#x27;name&#x27;,&#x27;name_native&#x27;,&#x27;gender&#x27;,&#x27;age&#x27;,&#x27;phone&#x27;,&#x27;aadhaar&#x27;,&#x27;city&#x27;,&#x27;state&#x27;,&#x27;salary&#x27;])</text><text class="terminal-2269685148-r1" x="1586" y="93.2" textLength="12.2" clip-path="url(#terminal-2269685148-line-3)">
+</text><text class="terminal-2269685148-r1" x="1586" y="117.6" textLength="12.2" clip-path="url(#terminal-2269685148-line-4)">
+</text><text class="terminal-2269685148-r3" x="85.4" y="142" textLength="195.2" clip-path="url(#terminal-2269685148-line-5)">name&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2269685148-r3" x="317.2" y="142" textLength="134.2" clip-path="url(#terminal-2269685148-line-5)">name_native</text><text class="terminal-2269685148-r3" x="488" y="142" textLength="73.2" clip-path="url(#terminal-2269685148-line-5)">gender</text><text class="terminal-2269685148-r3" x="597.8" y="142" textLength="36.6" clip-path="url(#terminal-2269685148-line-5)">age</text><text class="terminal-2269685148-r3" x="671" y="142" textLength="170.8" clip-path="url(#terminal-2269685148-line-5)">aadhaar&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2269685148-r3" x="878.4" y="142" textLength="183" clip-path="url(#terminal-2269685148-line-5)">phone&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2269685148-r3" x="1098" y="142" textLength="97.6" clip-path="url(#terminal-2269685148-line-5)">city&#160;&#160;&#160;&#160;</text><text class="terminal-2269685148-r3" x="1232.2" y="142" textLength="158.6" clip-path="url(#terminal-2269685148-line-5)">state&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2269685148-r3" x="1427.4" y="142" textLength="109.8" clip-path="url(#terminal-2269685148-line-5)">salary&#160;&#160;&#160;</text><text class="terminal-2269685148-r1" x="1586" y="142" textLength="12.2" clip-path="url(#terminal-2269685148-line-5)">
+</text><text class="terminal-2269685148-r1" x="0" y="166.4" textLength="1549.4" clip-path="url(#terminal-2269685148-line-6)">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</text><text class="terminal-2269685148-r1" x="1586" y="166.4" textLength="12.2" clip-path="url(#terminal-2269685148-line-6)">
+</text><text class="terminal-2269685148-r4" x="12.2" y="190.8" textLength="36.6" clip-path="url(#terminal-2269685148-line-7)">&#160;&#160;0</text><text class="terminal-2269685148-r5" x="85.4" y="190.8" textLength="195.2" clip-path="url(#terminal-2269685148-line-7)">Rahul&#160;Chaturvedi</text><text class="terminal-2269685148-r6" x="317.2" y="190.8" textLength="183" clip-path="url(#terminal-2269685148-line-7)">राहुल&#160;चतुर्वेदी</text><text class="terminal-2269685148-r7" x="488" y="190.8" textLength="48.8" clip-path="url(#terminal-2269685148-line-7)">male</text><text class="terminal-2269685148-r1" x="597.8" y="190.8" textLength="36.6" clip-path="url(#terminal-2269685148-line-7)">35&#160;</text><text class="terminal-2269685148-r8" x="671" y="190.8" textLength="170.8" clip-path="url(#terminal-2269685148-line-7)">8001&#160;3389&#160;0832</text><text class="terminal-2269685148-r1" x="878.4" y="190.8" textLength="183" clip-path="url(#terminal-2269685148-line-7)">+91&#160;62654&#160;23511</text><text class="terminal-2269685148-r1" x="1098" y="190.8" textLength="97.6" clip-path="url(#terminal-2269685148-line-7)">Varanasi</text><text class="terminal-2269685148-r1" x="1232.2" y="190.8" textLength="158.6" clip-path="url(#terminal-2269685148-line-7)">Uttar&#160;Pradesh</text><text class="terminal-2269685148-r2" x="1427.4" y="190.8" textLength="109.8" clip-path="url(#terminal-2269685148-line-7)">₹37.1&#160;LPA</text><text class="terminal-2269685148-r1" x="1586" y="190.8" textLength="12.2" clip-path="url(#terminal-2269685148-line-7)">
+</text><text class="terminal-2269685148-r4" x="12.2" y="215.2" textLength="36.6" clip-path="url(#terminal-2269685148-line-8)">&#160;&#160;1</text><text class="terminal-2269685148-r5" x="85.4" y="215.2" textLength="195.2" clip-path="url(#terminal-2269685148-line-8)">Aditya&#160;Dwivedi&#160;&#160;</text><text class="terminal-2269685148-r6" x="317.2" y="215.2" textLength="183" clip-path="url(#terminal-2269685148-line-8)">आदित्य&#160;द्विवेदी</text><text class="terminal-2269685148-r7" x="488" y="215.2" textLength="48.8" clip-path="url(#terminal-2269685148-line-8)">male</text><text class="terminal-2269685148-r1" x="597.8" y="215.2" textLength="36.6" clip-path="url(#terminal-2269685148-line-8)">33&#160;</text><text class="terminal-2269685148-r8" x="671" y="215.2" textLength="170.8" clip-path="url(#terminal-2269685148-line-8)">7030&#160;5641&#160;3955</text><text class="terminal-2269685148-r1" x="878.4" y="215.2" textLength="183" clip-path="url(#terminal-2269685148-line-8)">+91&#160;82388&#160;49696</text><text class="terminal-2269685148-r1" x="1098" y="215.2" textLength="97.6" clip-path="url(#terminal-2269685148-line-8)">Agra&#160;&#160;&#160;&#160;</text><text class="terminal-2269685148-r1" x="1232.2" y="215.2" textLength="158.6" clip-path="url(#terminal-2269685148-line-8)">Uttar&#160;Pradesh</text><text class="terminal-2269685148-r2" x="1427.4" y="215.2" textLength="109.8" clip-path="url(#terminal-2269685148-line-8)">₹46.8&#160;LPA</text><text class="terminal-2269685148-r1" x="1586" y="215.2" textLength="12.2" clip-path="url(#terminal-2269685148-line-8)">
+</text><text class="terminal-2269685148-r4" x="12.2" y="239.6" textLength="36.6" clip-path="url(#terminal-2269685148-line-9)">&#160;&#160;2</text><text class="terminal-2269685148-r5" x="85.4" y="239.6" textLength="195.2" clip-path="url(#terminal-2269685148-line-9)">Mohan&#160;Rathore&#160;&#160;&#160;</text><text class="terminal-2269685148-r6" x="317.2" y="239.6" textLength="122" clip-path="url(#terminal-2269685148-line-9)">मोहन&#160;राठौर</text><text class="terminal-2269685148-r7" x="488" y="239.6" textLength="48.8" clip-path="url(#terminal-2269685148-line-9)">male</text><text class="terminal-2269685148-r1" x="597.8" y="239.6" textLength="36.6" clip-path="url(#terminal-2269685148-line-9)">29&#160;</text><text class="terminal-2269685148-r8" x="671" y="239.6" textLength="170.8" clip-path="url(#terminal-2269685148-line-9)">7430&#160;3911&#160;7183</text><text class="terminal-2269685148-r1" x="878.4" y="239.6" textLength="183" clip-path="url(#terminal-2269685148-line-9)">+91&#160;93834&#160;65787</text><text class="terminal-2269685148-r1" x="1098" y="239.6" textLength="97.6" clip-path="url(#terminal-2269685148-line-9)">Bareilly</text><text class="terminal-2269685148-r1" x="1232.2" y="239.6" textLength="158.6" clip-path="url(#terminal-2269685148-line-9)">Uttar&#160;Pradesh</text><text class="terminal-2269685148-r2" x="1427.4" y="239.6" textLength="109.8" clip-path="url(#terminal-2269685148-line-9)">₹17.4&#160;LPA</text><text class="terminal-2269685148-r1" x="1586" y="239.6" textLength="12.2" clip-path="url(#terminal-2269685148-line-9)">
+</text><text class="terminal-2269685148-r4" x="12.2" y="264" textLength="36.6" clip-path="url(#terminal-2269685148-line-10)">&#160;&#160;3</text><text class="terminal-2269685148-r5" x="85.4" y="264" textLength="195.2" clip-path="url(#terminal-2269685148-line-10)">Amit&#160;Kashyap&#160;&#160;&#160;&#160;</text><text class="terminal-2269685148-r6" x="317.2" y="264" textLength="122" clip-path="url(#terminal-2269685148-line-10)">अमित&#160;कश्यप</text><text class="terminal-2269685148-r7" x="488" y="264" textLength="48.8" clip-path="url(#terminal-2269685148-line-10)">male</text><text class="terminal-2269685148-r1" x="597.8" y="264" textLength="36.6" clip-path="url(#terminal-2269685148-line-10)">55&#160;</text><text class="terminal-2269685148-r8" x="671" y="264" textLength="170.8" clip-path="url(#terminal-2269685148-line-10)">8247&#160;3178&#160;1084</text><text class="terminal-2269685148-r1" x="878.4" y="264" textLength="183" clip-path="url(#terminal-2269685148-line-10)">+91&#160;97360&#160;26064</text><text class="terminal-2269685148-r1" x="1098" y="264" textLength="97.6" clip-path="url(#terminal-2269685148-line-10)">Meerut&#160;&#160;</text><text class="terminal-2269685148-r1" x="1232.2" y="264" textLength="158.6" clip-path="url(#terminal-2269685148-line-10)">Uttar&#160;Pradesh</text><text class="terminal-2269685148-r2" x="1427.4" y="264" textLength="109.8" clip-path="url(#terminal-2269685148-line-10)">₹10.7&#160;LPA</text><text class="terminal-2269685148-r1" x="1586" y="264" textLength="12.2" clip-path="url(#terminal-2269685148-line-10)">
+</text><text class="terminal-2269685148-r4" x="12.2" y="288.4" textLength="36.6" clip-path="url(#terminal-2269685148-line-11)">&#160;&#160;4</text><text class="terminal-2269685148-r5" x="85.4" y="288.4" textLength="195.2" clip-path="url(#terminal-2269685148-line-11)">Vandana&#160;Rai&#160;&#160;&#160;&#160;&#160;</text><text class="terminal-2269685148-r6" x="317.2" y="288.4" textLength="109.8" clip-path="url(#terminal-2269685148-line-11)">वंदना&#160;राय</text><text class="terminal-2269685148-r9" x="488" y="288.4" textLength="73.2" clip-path="url(#terminal-2269685148-line-11)">female</text><text class="terminal-2269685148-r1" x="597.8" y="288.4" textLength="36.6" clip-path="url(#terminal-2269685148-line-11)">48&#160;</text><text class="terminal-2269685148-r8" x="671" y="288.4" textLength="170.8" clip-path="url(#terminal-2269685148-line-11)">6624&#160;7510&#160;7991</text><text class="terminal-2269685148-r1" x="878.4" y="288.4" textLength="183" clip-path="url(#terminal-2269685148-line-11)">+91&#160;63542&#160;78498</text><text class="terminal-2269685148-r1" x="1098" y="288.4" textLength="97.6" clip-path="url(#terminal-2269685148-line-11)">Bareilly</text><text class="terminal-2269685148-r1" x="1232.2" y="288.4" textLength="158.6" clip-path="url(#terminal-2269685148-line-11)">Uttar&#160;Pradesh</text><text class="terminal-2269685148-r2" x="1427.4" y="288.4" textLength="97.6" clip-path="url(#terminal-2269685148-line-11)">₹7.7&#160;LPA</text><text class="terminal-2269685148-r1" x="1586" y="288.4" textLength="12.2" clip-path="url(#terminal-2269685148-line-11)">
+</text><text class="terminal-2269685148-r1" x="1586" y="312.8" textLength="12.2" clip-path="url(#terminal-2269685148-line-12)">
+</text>
+    </g>
+    </g>
+</svg>

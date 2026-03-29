@@ -18,6 +18,7 @@
     <a href="#-batch-generation-for-aiml"><img src="https://img.shields.io/badge/🤖_ML_Ready-DataFrame_Export-FF6F00?style=flat-square" alt="ML Ready"></a>
     <a href="#-8-indian-languages"><img src="https://img.shields.io/badge/🔤_Languages-8_Indic_Scripts-blueviolet?style=flat-square" alt="8 Languages"></a>
     <a href="#-id-numbers"><img src="https://img.shields.io/badge/✅_Aadhaar-Verhoeff_Valid-success?style=flat-square" alt="Verhoeff Checksum"></a>
+    <a href="https://huggingface.co/datasets/adwaith06/indic-synthetic-profiles"><img src="https://img.shields.io/badge/🤗_HuggingFace-Dataset-FFD21E?style=flat-square" alt="HuggingFace Dataset"></a>
   </div>
 </div>
 
@@ -204,6 +205,12 @@ csv_str = fake.to_csv(100)
 # Raw list of dicts
 records = fake.generate_batch(100)
 ```
+
+#### 👀 What `to_dataframe(5)` looks like:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/adwaith-0/indic-faker/main/.github/dataframe_preview.svg" alt="to_dataframe() output preview" width="100%">
+</p>
 
 </details>
 
@@ -468,6 +475,64 @@ assert fake1.aadhaar() == fake2.aadhaar() # Always True
 | `to_dataframe(n)` | pandas DataFrame | `DataFrame(n rows)` |
 
 </details>
+
+---
+
+## 🎯 Use Cases
+
+Not sure what to do with `indic-faker`? Here are the things developers are building with it:
+
+| Use Case | What You'd Generate | Why It Matters |
+|:---------|:-------------------|:---------------|
+| **🔍 Fraud Detection Training Data** | 100K profiles with Aadhaar, PAN, bank accounts | Train ML models to catch synthetic identity fraud, duplicate KYC submissions, and anomalous patterns — without touching real PII |
+| **🤖 LLM Fine-Tuning** | Multilingual name/address pairs in 8 Indic scripts | Fine-tune models that actually understand Indian names, addresses, and ID formats instead of hallucinating Western data |
+| **✅ KYC System Testing** | Aadhaar (Verhoeff ✓), PAN, GSTIN with valid checksums | Stress-test your e-KYC verification pipeline with structurally valid IDs — no compliance risk |
+| **📊 Data Pipeline QA** | 10K–1M rows with messy addresses, mixed scripts | Validate ETL pipelines, UTF-8 handling, and data cleaning logic against realistic edge cases |
+| **💰 Fintech Prototyping** | UPI IDs, IFSC codes, INR amounts in lakhs/crores | Populate fintech app demos with data that looks real to Indian users and investors |
+| **🎓 Academic Research** | Balanced dataset across 8 languages + states | Study demographic distributions, NLP on Indic scripts, or benchmark multilingual models |
+| **🧪 Load Testing** | Batch of 1M records via `to_dataframe()` | Generate arbitrarily large test datasets for database benchmarks and API load tests |
+
+```python
+# Example: Generate fraud detection training data
+fake = IndicFaker(seed=42)
+df = fake.to_dataframe(100_000, fields=[
+    "name", "aadhaar", "pan", "phone", "address", 
+    "bank_account", "upi_id", "dob", "age"
+])
+df.to_csv("fraud_training_data.csv", index=False)
+# → 100K rows of realistic Indian KYC data, ready for ML
+```
+
+---
+
+## 🤗 HuggingFace Dataset
+
+Want to skip the generation step? We've published a **ready-to-use 10,000 row dataset** on HuggingFace with all 8 Indian languages equally represented:
+
+👉 **[adwaith06/indic-synthetic-profiles on HuggingFace](https://huggingface.co/datasets/adwaith06/indic-synthetic-profiles)**
+
+```python
+# Load directly from HuggingFace
+from datasets import load_dataset
+
+dataset = load_dataset("adwaith06/indic-synthetic-profiles")
+df = dataset["train"].to_pandas()
+
+print(df.shape)  # (10000, 23)
+print(df["language"].value_counts())
+# hi    1250
+# ml    1250
+# ta    1250
+# te    1250
+# bn    1250
+# kn    1250
+# gu    1250
+# mr    1250
+```
+
+The dataset includes 23 columns: name (Latin + native script), gender, DOB, age, language, Aadhaar, PAN, phone, email, full address, city, state, pincode, bank account details, UPI ID, employer, job title, salary, college, and degree.
+
+**Need more data?** Generate your own with `pip install indic-faker[ml]` — the library can produce millions of rows in minutes.
 
 ---
 
