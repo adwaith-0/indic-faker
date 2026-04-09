@@ -24,9 +24,18 @@
 
 <br>
 
-**indic-faker** generates realistic Indian fake data — names in 8 native scripts, Aadhaar numbers with **valid Verhoeff checksums**, state-aware addresses with real pincodes, UPI IDs, salary data in LPA, company names (Pvt Ltd, LLP), IIT/NIT/IIM names, and batch export for AI/ML datasets. It's `faker`, but with **India as a first-class citizen**.
+**indic-faker** generates realistic Indian fake data - names in 8 native scripts, Aadhaar numbers with **valid Verhoeff checksums**, state aware addresses with real pincodes, UPI IDs, salary data in LPA, company names (Pvt Ltd, LLP), IIT/NIT/IIM names, and batch export for AI/ML datasets. It's `faker`, but with **India as a first-class citizen**.
 
-Every method that isn't India-specific (`.ipv4()`, `.text()`, `.uuid4()`) **automatically passes through** to vanilla Faker — so you only need one import.
+Every method that isn't India-specific (`.ipv4()`, `.text()`, `.uuid4()`) **automatically passes through** to vanilla Faker - so you only need one import.
+
+
+## 📑 Table of Contents
+- [🚀 Install](#-install)
+- [⚡ Quick Start](#-quick-start)
+- [🔤 8 Indian Languages](#-8-indian-languages)
+- [🆔 ID Numbers](#-id-numbers)
+- [📋 Complete API Reference](#-complete-api-reference)
+- [🤝 Contributing](#-contributing)
 
 <div align="center">
 
@@ -63,9 +72,12 @@ For ML/AI dataset export (pandas DataFrame):
 
 ```bash
 pip install indic-faker[ml]
+
+# If face any issue with Mac/Linux/ZSH user, run this
+pip install "indic-faker[ml]"
 ```
 
-That's it. No cloning, no setup — just install and use.
+That's it. No cloning, no setup, just install and use.
 
 </details>
 
@@ -77,12 +89,12 @@ from indic_faker import IndicFaker
 
 fake = IndicFaker(language="ml")  # Malayalam
 
-# Names — Latin by default, native on demand
+# Names:- Latin by default, native on demand
 fake.name()                    # "Rajesh Krishnan"
-fake.name(script="native")    # "രാജേഷ് കൃഷ്ണൻ"
+fake.name(script="native")     # "രാജേഷ് കൃഷ്ണൻ"
 
 # Indian ID numbers (algorithm-validated)
-fake.aadhaar()                 # "3847 2918 4721"  ← Verhoeff checksum ✓
+fake.aadhaar()                 # "3847 2918 4721"  <- Verhoeff checksum ✓
 fake.pan()                     # "ABCPK1234F"
 fake.gstin()                   # "32ABCPK1234F1Z5" ← Kerala state code ✓
 
@@ -90,11 +102,11 @@ fake.gstin()                   # "32ABCPK1234F1Z5" ← Kerala state code ✓
 fake.phone()                   # "+91 94471 82931"
 fake.upi_id()                  # "rajesh.krishnan@okicici"
 
-# Money — Indian comma system (lakhs/crores, not millions)
+# Money:- Indian comma system (lakhs/crores, not millions)
 fake.amount_inr()              # "₹4,29,150.00"
 fake.salary_lpa()              # "₹12.5 LPA"
 
-# Address — state-aware with valid pincodes
+# Address:- state-aware with valid pincodes
 fake.address()                 # "TC 14/2341, Pettah, TVM - 695024"
 fake.messy_address()           # "14/2341, Nr. Temple,Pettah, Trivandrum"
 
@@ -103,7 +115,7 @@ fake.company_indian()          # "Sharma Technologies Pvt. Ltd."
 fake.college()                 # "IIT Bombay"
 fake.job_title()               # "Senior Software Engineer"
 
-# Faker pass-through — these just work
+# Faker pass-through, these just work
 fake.ipv4()                    # "192.168.1.1"
 fake.text()                    # "Lorem ipsum..."
 fake.uuid4()                   # "a1b2c3d4-..."
@@ -142,9 +154,9 @@ fake.name(script="native")        # "সৌরভ গাঙ্গুলী"
 </details>
 
 <details open>
-<summary><h2>👤 Profile — Complete Indian Identity</h2></summary>
+<summary><h2>👤 Profile:- Complete Indian Identity</h2></summary>
 
-Generate a **consistent, complete identity** in a single call. Every field belongs to the same person.
+Generate a **consistent and complete Indian identity** in one call. The `profile()` method ties together name, Aadhaar, PAN, a state-aware address, and more, ensuring all data belongs to the same fictional person.
 
 ```python
 profile = fake.profile()
@@ -189,7 +201,7 @@ fake.profile(fields=["name", "aadhaar", "phone", "email"])
 The **killer feature** for data scientists. Generate thousands of realistic Indian records instantly.
 
 ```python
-# 🔥 Generate 1000 records as pandas DataFrame
+# Generate 1000 records as pandas DataFrame
 df = fake.to_dataframe(1000)
 df.to_csv("indian_test_data.csv", index=False)
 
@@ -206,7 +218,7 @@ csv_str = fake.to_csv(100)
 records = fake.generate_batch(100)
 ```
 
-#### 👀 What `to_dataframe(5)` looks like:
+#### What `to_dataframe(5)` looks like:
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/adwaith-0/indic-faker/main/.github/dataframe_preview.svg" alt="to_dataframe() output preview" width="100%">
@@ -222,15 +234,15 @@ records = fake.generate_batch(100)
 All generated with **correct formats and validated checksums**. These pass real-world format validation.
 
 ```python
-# Aadhaar — Verhoeff checksum validated (not just random 12 digits)
+# Aadhaar:- Verhoeff checksum validated (not just random 12 digits)
 fake.aadhaar()                     # "3847 2918 4721"
 fake.aadhaar(formatted=False)      # "384729184721"
 
-# PAN — entity-type aware
+# PAN:- entity-type aware
 fake.pan()                         # "ABCPK1234F" (Person)
 fake.pan(entity_type="C")          # "XYZCK5678G" (Company)
 
-# GSTIN — correct state code + modular checksum
+# GSTIN:- correct state code + modular checksum
 fake.gstin()                       # "32ABCPK1234F1Z5"
 fake.gstin(state="MH")             # "27..." (Maharashtra)
 
@@ -256,7 +268,7 @@ fake.village()             # "Punalur, Kollam District, Kerala"
 fake.pincode()             # "695024" (valid for Kerala)
 fake.landmark()            # "Near Government Hospital"
 
-# 🔥 Messy address — simulates real-world Indian user input
+# Messy address:- simulates real-world Indian user input
 fake.messy_address()
 # "14/2341, Nr. Temple,Pettah, Trivandrum"
 #  ↑ abbreviations  ↑ old city names  ↑ missing pincode
@@ -324,7 +336,7 @@ fake.salary_monthly()              # "₹1,54,167"
 fake.job_record()                  # {"title": ..., "employer": ..., "salary_lpa": ...}
 ```
 
-Salary bands: `fresher` → `junior` → `mid` → `senior` → `lead` → `director` → `vp` → `cxo`
+Salary bands: `fresher` -> `junior` -> `mid` -> `senior` -> `lead` -> `director` -> `vp` -> `cxo`
 
 </details>
 
@@ -484,13 +496,13 @@ Not sure what to do with `indic-faker`? Here are the things developers are build
 
 | Use Case | What You'd Generate | Why It Matters |
 |:---------|:-------------------|:---------------|
-| **🔍 Fraud Detection Training Data** | 100K profiles with Aadhaar, PAN, bank accounts | Train ML models to catch synthetic identity fraud, duplicate KYC submissions, and anomalous patterns — without touching real PII |
-| **🤖 LLM Fine-Tuning** | Multilingual name/address pairs in 8 Indic scripts | Fine-tune models that actually understand Indian names, addresses, and ID formats instead of hallucinating Western data |
-| **✅ KYC System Testing** | Aadhaar (Verhoeff ✓), PAN, GSTIN with valid checksums | Stress-test your e-KYC verification pipeline with structurally valid IDs — no compliance risk |
-| **📊 Data Pipeline QA** | 10K–1M rows with messy addresses, mixed scripts | Validate ETL pipelines, UTF-8 handling, and data cleaning logic against realistic edge cases |
-| **💰 Fintech Prototyping** | UPI IDs, IFSC codes, INR amounts in lakhs/crores | Populate fintech app demos with data that looks real to Indian users and investors |
-| **🎓 Academic Research** | Balanced dataset across 8 languages + states | Study demographic distributions, NLP on Indic scripts, or benchmark multilingual models |
-| **🧪 Load Testing** | Batch of 1M records via `to_dataframe()` | Generate arbitrarily large test datasets for database benchmarks and API load tests |
+| **Fraud Detection Training Data** | 100K profiles with Aadhaar, PAN, bank accounts | Train ML models to catch synthetic identity fraud, duplicate KYC submissions, and anomalous patterns, without touching real PII |
+| **LLM Fine-Tuning** | Multilingual name/address pairs in 8 Indic scripts | Fine-tune models that actually understand Indian names, addresses, and ID formats instead of hallucinating Western data |
+| **KYC System Testing** | Aadhaar (Verhoeff), PAN, GSTIN with valid checksums | Stress-test your e-KYC verification pipeline with structurally valid IDs, no compliance risk |
+| **Data Pipeline QA** | 10K–1M rows with messy addresses, mixed scripts | Validate ETL pipelines, UTF-8 handling, and data cleaning logic against realistic edge cases |
+| **Fintech Prototyping** | UPI IDs, IFSC codes, INR amounts in lakhs/crores | Populate fintech app demos with data that looks real to Indian users and investors |
+| **Academic Research** | Balanced dataset across 8 languages + states | Study demographic distributions, NLP on Indic scripts, or benchmark multilingual models |
+| **Load Testing** | Batch of 1M records via `to_dataframe()` | Generate arbitrarily large test datasets for database benchmarks and API load tests |
 
 ```python
 # Example: Generate fraud detection training data
@@ -500,16 +512,16 @@ df = fake.to_dataframe(100_000, fields=[
     "bank_account", "upi_id", "dob", "age"
 ])
 df.to_csv("fraud_training_data.csv", index=False)
-# → 100K rows of realistic Indian KYC data, ready for ML
+# -> 100K rows of realistic Indian KYC data, ready for ML
 ```
 
 ---
 
-## 🤗 HuggingFace Dataset
+## 🤗 Hugging Face Dataset
 
-Want to skip the generation step? We've published a **ready-to-use 10,000 row dataset** on HuggingFace with all 8 Indian languages equally represented:
+Want to skip the generation step? We've published a **ready-to-use 10,000 row dataset** on Hugging Face with all 8 Indian languages equally represented:
 
-👉 **[adwaith06/indic-synthetic-profiles on HuggingFace](https://huggingface.co/datasets/adwaith06/indic-synthetic-profiles)**
+👉 **[adwaith06/indic-synthetic-profiles on Hugging Face](https://huggingface.co/datasets/adwaith06/indic-synthetic-profiles)**
 
 ```python
 # Load directly from HuggingFace
@@ -532,7 +544,7 @@ print(df["language"].value_counts())
 
 The dataset includes 23 columns: name (Latin + native script), gender, DOB, age, language, Aadhaar, PAN, phone, email, full address, city, state, pincode, bank account details, UPI ID, employer, job title, salary, college, and degree.
 
-**Need more data?** Generate your own with `pip install indic-faker[ml]` — the library can produce millions of rows in minutes.
+**Need more data?** Generate your own with `pip install indic-faker[ml]`, the library can produce millions of rows in minutes.
 
 ---
 
@@ -540,13 +552,15 @@ The dataset includes 23 columns: name (Latin + native script), gender, DOB, age,
 
 We welcome contributions! Here's how you can help make indic-faker even better:
 
-- 🔤 **Add a new language** — Create `src/indic_faker/data/names/<lang_code>.py`
-- 🏘️ **Expand address data** — Add more cities/villages/districts
-- 💡 **New provider ideas** — Create a provider in `src/indic_faker/providers/`
-- 🐛 **Bug fixes** — Found wrong data? Open an issue or PR
+- 🔤 **Add a new language**:- Create `src/indic_faker/data/names/<lang_code>.py`
+- 🏘️ **Expand address data**:- Add more cities/villages/districts
+- 💡 **New provider ideas**:- Create a provider in `src/indic_faker/providers/`
+- 🐛 **Bug fixes**:- Found wrong data? Open an issue or PR
+
 
 ```bash
 # Development setup
+# Fork this repository, then clone your fork:-
 git clone https://github.com/adwaith-0/indic-faker.git
 cd indic-faker
 pip install -e ".[dev]"
@@ -559,7 +573,7 @@ All 86 tests must pass before submitting a PR.
 
 ## 📜 License
 
-[MIT License](LICENSE) — free for everyone, forever. Use it in personal projects, startups, enterprises, and everything in between.
+[MIT License](LICENSE):- Free for everyone, forever. Use it in personal projects, startups, enterprises, and everything in between.
 
 ---
 
